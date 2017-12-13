@@ -1,7 +1,5 @@
 # basics from https://github.com/docker/labs/blob/master/beginner/flask-app/Dockerfile
 # our base image
-#FROM alpine:3.7
-# FROM frolvlad/alpine-python3:latest
 FROM  ubuntu:17.04
 
 #install libs necessary for Pillow to be pip installed (build from source)
