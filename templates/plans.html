@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vind het cadeau!</title>
+      <link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }}>
+      <link rel="stylesheet" href={{ url_for('static', filename='styles.css') }}>
+  </head>
+  <body>
+     {% if h2 %}
+      <h2>{{h2}}</h2>
+     {% endif %}
+      <form action = {{url_for('plans')}} method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" accept="image/x-png,image/gif,image/jpeg"/>
+         <input type = "submit"/>
+      </form>
+
+      <p>
+
+      Choose image:
+
+      </p>
+      <form  action = {{url_for('plans')}} method = "POST">
+        {% for image in images %}
+          {% if image == current_img %}
+            <input type="radio" name="image_name" value={{image}} checked> {{image}}<br>
+          {% else %}
+            <input type="radio" name="image_name" value={{image}}> {{image}}<br>
+          {% endif %}
+        {% endfor %}
+        <input type="submit" name="action" value="Select">
+        <input type="submit" name="action" value="Delete">
+      </form>
+  </body>
+</html>

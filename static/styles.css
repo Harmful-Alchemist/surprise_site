@@ -1,0 +1,18 @@
+body {
+    background-image:url('backgrounds/Trees2.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color: #20B753;
+}
+
+h1, h2, p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 32em
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

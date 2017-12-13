@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vind het cadeau!</title>
+    <link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='styles.css') }}>
+  </head>
+  <body>
+    <h1> {{ header }} </h1>
+
+    {% if h2 %}
+      <h2>x={{h2}}</h2>
+    {% endif %}
+
+    {% if a and href%}
+      <p>
+        <a href={{ href }}>{{ a }}</a>
+      <p>
+    {% endif %}
+
+    {% if p %}
+      <p>{{ p }}</p>
+    {% endif %}
+
+    <a href="{{ location_url }}">
+      <img src="{{ img_url }}" alt="floorplan" ismap>
+    </a>
+
+    {% if audio %}
+      <audio autoplay>
+        <source src="{{ audio }}"/>
+      </audio>
+    {% endif %}
+  </body>
+</html>
