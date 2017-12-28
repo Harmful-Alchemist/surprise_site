@@ -19,5 +19,8 @@ COPY static /usr/src/app/static
 # tell the port number the container should expose
 EXPOSE 5000
 
+#change directory so we can find our files with os.path.join
+WORKDIR "/usr/src/app/"
+
 # run the application
-CMD ["python3", "/usr/src/app/app.py"]
+CMD ["python3", "app.py"]
